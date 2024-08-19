@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title"><img src="/imgs/pink/aglogo.png" alt="" class="logo">ARCIEEXO</h1>
+
+        <button class="pink-menu">
+            <i class="fa fa-bars" style="color: #d69999;"></i>
+        </button>
+
+        <ul class="sidebar">
+            <li class="navlist"><a href="index.html">Home</a></li>
+            <li class="navlist"><a href="about.html" target="_blank">About</a></li>
+            <li class="navlist"><a href="javascript.html" target="_blank">Javascript</a></li>
+            <li class="navlist"><a href="contact.html" target="_blank">Contact</a></li>
+
+            <li class="navlist">
+                <a href="https://github.com/ArcieeX">
+                    <i class="fa fa-brands fa-github fa-beat-fade"></i>
+                </a>
+            </li>
+            <li class="navlist">
+                <a href="https://www.linkedin.com/in/arcieexo/">
+                    <i class="fa fa-brands fa-linkedin fa-beat-fade" style="color: #e5aeae;"></i>
+                </a>
+            </li>
+            <li class="navlist">
+                <a href="">
+                    <i class="fa fa-brands fa-insta fa-beat-fade" style="color:#e5aeae"></i>
+                </a>
+            </li>
+            <li class="navlist">
+                <a href="/imgs/ag-resume.pdf">
+                    <i class="fa fa-file fa-beat-fade" style="color:#e5aeae">Resume</i>
+                </a>
+            </li>
+
+        </ul>
+
+    </header>
+    
+
+    <div class="js-hero">
+        <h2 class="js-h2">Javascript</h2>
+    
+        <div id="cardbg"class="js-cards">
+            <div class="js-card">
+                <p class="card1">Madlib</p>
+            </div>
+            <div class="js-card">
+                <p class="card2">Current Time In Your Fav Place</p>
+            </div>
+            <div class="js-card">
+                    <label for="selectColor">
+                        Select a color:
+                    </label>
+                    <select id="selectColor" onchange="changeColor()">
+                        <option value="black">Black</option>
+                        <option value="crimson">Red</option>
+                        <option value="green">Green</option>
+                        <option value="#0984e3">Blue</option>
+                        <option value="cyan">Cyan</option>
+                        <option value="#00b894">Mint Leaf</option>
+                        <option value="#e84393">Pink</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-icons-wrapper">
+            <a href="" class="icons">
+                <i class="fa fa-brands fa-github" style="color: #dda6a6;"></i>
+            </a>
+            <a href="" class="icons">
+                <i class="fa fa-brands fa-linkedin" style="color: #e5aeae;"></i>
+            </a>
+            <a href="" class="icons">
+                <i class="fa fa-file"></i>
+            </a>
+        </div>
+        <p>&COPY; All rights reserved.</p>
+    </footer>
+
+    <script src="data/data.js"></script>
+    <script type="module" src="js/custom.js"></script>
+</body>
+
+</html>
