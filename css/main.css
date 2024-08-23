@@ -11,30 +11,23 @@
     --black: #000;
 
 }
-
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-
 html {
     margin: 0;
     border: 0;
     padding: 0;
 }
-
-
-
 body {
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
     background-color: #000;
 }
-
 /* Wrap entire page except header and footer in a div and give that display: grid */
-
 header {
 
     height: 9rem;
@@ -50,65 +43,51 @@ header {
     padding: 0;
     white-space: nowrap;
     justify-content: space-between;
-
 }
-
-.nav {}
-
 h1 {
     color: var(--white)
 }
-
 .title {
     display: flex;
     align-items: center;
 }
-
 .logo {
     width: 2rem;
     height: 2rem;
     max-width: 100%;
 }
-
 .pink-menu {
     display: none;
     cursor: pointer;
 }
-
 .pink menu i {
     display: none;
     color: var(--pink);
 }
-
 .sidebar {
     display: none;
-    color: var(--peachy);
-    top: 7.5rem;
-    list-style: none;
-    height: 100vh;
-}
-
-.navlist a {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    list-style: none;
-    padding: 3rem;
-    word-spacing: 3px;
-    color: pink;
+    /* flex-direction: column;
+    justify-content: space-around; */
+    margin: 0;
     list-style: none;
     text-decoration: none;
-
-
+    text-align: center;
+    word-spacing: 3px;   
 }
-
-
-.navlist a:hover {
+.sidebar a {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    word-spacing: 3px;
+}
+.sidebar a:hover {
     color: white;
+} 
+.change {
+    display: none;
 }
-
-
 .hero {
     display: block;
     background-image: url("/imgs/pink/pink-option2.jpg");
@@ -119,9 +98,7 @@ h1 {
     max-width: 100%;
     Width: 100%;
     height: 20rem;
-
 }
-
 .hero-text {
     background-color: rgb(0, 0, 0);
     /* Fallback color */
@@ -142,7 +119,6 @@ h1 {
     display: block;
     position: relative;
 }
-
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -154,9 +130,7 @@ h1 {
     margin-top: 1rem;
     margin-bottom: 3rem;
     align-self: center;
-
 }
-
 .cards-wrapper {
     display: flex;
     flex-direction: column;
@@ -168,7 +142,6 @@ h1 {
     margin-bottom: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 img {
     max-width: 100%;
     align-self: center;
@@ -176,7 +149,6 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 3s;
 }
-
 .content {
     text-align: center;
     background-color: pink;
@@ -184,10 +156,8 @@ img {
     /* border-color: #DBA493; */
     border: 1rem solid pink;
     border-radius: 10%;
-
     justify-content: center;
 }
-
 .content a {
     text-decoration: none;
     background-color: var(--black);
@@ -197,7 +167,6 @@ img {
     border: 0.2rem solid var(--nude);
     cursor: pointer;
 }
-
 .content a:hover {
     background-color: var(--white);
     color: var(--pink);
@@ -214,10 +183,7 @@ img {
     left: 0;
     
 }
-
-
 .column {
-
     grid-column: 1/2;
     grid-row: 2/3;
     float: left;
@@ -226,8 +192,7 @@ img {
     padding: 0 0.5rem;
     text-align: center;
     background-color: white;
-    font-siz: 1rem;
-
+    font-size: 1rem;
 }
 
 .card {
@@ -236,8 +201,7 @@ img {
 
 .container {
     padding: 0 16px;
-    background-color: white;
-    
+    background-color: white;   
 }
 
 .scroll i {
@@ -249,13 +213,8 @@ img {
 
 .scroll i:hover {
     background-color: var(--chocolate);
-
-
     /* border-width: 0; */
-
-
     padding: 2rem;
-
     border-style: none;
 }
 
@@ -273,9 +232,6 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
-
-
-
 /* ABOUT PAGE SECTION */
 .about-main-wrapper {
     display: grid;
@@ -314,8 +270,53 @@ footer {
     color: black;
 }
 
-.display-none {
+/* .display-none {
     display: none;
+    height: 200px;
+	width: 200px;
+	margin: 2rem auto;
+	background-color: lightblue;
+} */
+.show-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: pink;
+    color: black;
+    padding: 2rem;
+    margin: 4rem;
+    border-radius: 3%;
+}
+select#selectColor {
+   
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    /* height: 5px; */
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 90%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+select#selectType {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    /* height: 5px; */
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 90%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
 }
 
 .js-cards {
@@ -326,7 +327,6 @@ footer {
     text-align: center;
     color: white;
     padding: 1rem;
-
 }
 
 .js-h2 {
@@ -345,8 +345,6 @@ footer {
     color: white;
     cursor: pointer;
 }
-
-
 
 /* CONTACT PAGE SECTION*/
 .main-contact {
@@ -412,6 +410,10 @@ fieldset {
     margin-bottom: 30px;
 }
 
+.display-none {
+    display: none;
+}
+
 @media (max-width: 700px) {
     .pink-menu {
         display: block;
@@ -419,24 +421,22 @@ fieldset {
         right: 0;
     }
 
+    
+
     .pink-menu i {
         display: block;
     }
 
-
     .sidebar {
+        display: flex;
         font-size: 2rem;
-        display: ;
+        display: none ;
         left: 0;
         right: 0;
         position: absolute;
     }
-    .navlist a {
-        background: var(--nude)
-    }
 
-    .change {
-
+    .change{
         display: block;
         left: 0;
         right: 0;
@@ -449,8 +449,6 @@ fieldset {
         align-content: center;
         text-align: center;
         margin: 1rem 0rem 1rem 0;
-
-
     }
 }
 
@@ -460,16 +458,17 @@ fieldset {
     }
 
     .sidebar {
-        display: block;
         flex-direction: row;
+        display: flex;
+        flex-direction: row;
+        box-sizing: content-box;
     }
+    .js-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    
 
 }
 
-@media (min-width: 710px) {
-    header {
-        /* flex-direction: column;
-        flex-wrap: nowrap; */
-        height: 15rem;
-    }
-}

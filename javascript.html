@@ -16,66 +16,72 @@
         <button class="pink-menu">
             <i class="fa fa-bars" style="color: #d69999;"></i>
         </button>
-
-        <ul class="sidebar">
-            <li class="navlist"><a href="index.html">Home</a></li>
-            <li class="navlist"><a href="about.html" target="_blank">About</a></li>
-            <li class="navlist"><a href="javascript.html" target="_blank">Javascript</a></li>
-            <li class="navlist"><a href="contact.html" target="_blank">Contact</a></li>
-
-            <li class="navlist">
-                <a href="https://github.com/ArcieeX">
-                    <i class="fa fa-brands fa-github fa-beat-fade"></i>
-                </a>
-            </li>
-            <li class="navlist">
-                <a href="https://www.linkedin.com/in/arcieexo/">
-                    <i class="fa fa-brands fa-linkedin fa-beat-fade" style="color: #e5aeae;"></i>
-                </a>
-            </li>
-            <li class="navlist">
-                <a href="">
-                    <i class="fa fa-brands fa-insta fa-beat-fade" style="color:#e5aeae"></i>
-                </a>
-            </li>
-            <li class="navlist">
-                <a href="/imgs/ag-resume.pdf">
-                    <i class="fa fa-file fa-beat-fade" style="color:#e5aeae">Resume</i>
-                </a>
-            </li>
-
-        </ul>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="javascript.html">Javascript</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://github.com/ArcieeX">
+                <i class="fa fa-brands fa-github fa-beat-fade"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arcieexo/">
+                <i class="fa fa-brands fa-linkedin fa-beat-fade" style="color: #e5aeae;"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-brands fa-insta fa-beat-fade" style="color:#e5aeae"></i>
+            </a>
+            <a href="/imgs/ag-resume.pdf" class="">
+                <i class="fa fa-file fa-beat-fade" style="color:#e5aeae">Resume</i>
+            </a>
+        </div>
 
     </header>
-    
+
 
     <div class="js-hero">
         <h2 class="js-h2">Javascript</h2>
-    
-        <div id="cardbg"class="js-cards">
-            <div class="js-card">
-                <p class="card1">Madlib</p>
-            </div>
-            <div class="js-card">
-                <p class="card2">Current Time In Your Fav Place</p>
-            </div>
-            <div class="js-card">
-                    <label for="selectColor">
-                        Select a color:
-                    </label>
-                    <select id="selectColor" onchange="changeColor()">
-                        <option value="black">Black</option>
-                        <option value="crimson">Red</option>
-                        <option value="green">Green</option>
-                        <option value="#0984e3">Blue</option>
-                        <option value="cyan">Cyan</option>
-                        <option value="#00b894">Mint Leaf</option>
-                        <option value="#e84393">Pink</option>
-                    </select>
-                </div>
 
-            </div>
+        <div class="js-cards">
+            <button class="js-card">
+                Madlib
+            </button>
+            <button class="js-card">
+                Current Time In Your Fav Place
+            </button>
+            <button id="toggleBtn" class="js-card">
+                Click to change to your fav color
+            </button>
         </div>
+        <div id="hiddenDiv" class="display-none show-div">
+            <form action="#" id="form">
+                <!-- form will have an ID of form. save that into a JS variable. then add an event listenter like this: form.addEventListener("submit", sumbitFunction). Get the boilerplate code from other forms and then you will have the data from the user in an object and you van use those the values -->
+            <label id="textColor" for="selectColor">
+                Choose a color:
+            </label>
+            <select id="selectColor" name="selectColor">
+                
+                <option value="crimson">Red</option>
+                <option value="green">Green</option>
+                <option value="#0984e3">Blue</option>
+                <option value="cyan">Cyan</option>
+                <option value="#00b894">Mint Leaf</option>
+                <option value="#e84393">Pink</option>
+            </select>
+            <label id="colorText" for="selectColor">
+                Choose a text Color:
+            </label>
+            <select id="selectColor">
+                <option value="crimson">Red</option>
+                <option value="green">Green</option>
+                <option value="#0984e3">Blue</option>
+                <option value="#e84393">Pink</option>
+            </select>
+            <input type="submit">
+        </form>
+        </div>
+       
+
+        
     </div>
 
     <footer>
