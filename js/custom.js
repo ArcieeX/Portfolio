@@ -5,29 +5,35 @@ const nav = document.querySelector(".sidebar");
 const menuIcon = document.querySelector(".pink-menu i");
 
 menuIcon.addEventListener("click", () => {
-    nav.classList.toggle("change"); // Toggle the sidebar visibility
-    menuIcon.classList.toggle("fa-times"); // Change icon to 'X' when open
+  nav.classList.toggle("change"); // Toggle the sidebar visibility
+  menuIcon.classList.toggle("fa-times"); // Change icon to 'X' when open
 });
 
+//cards 
 
-// Cards logic
-let cards = document.getElementById('cards-wrapper');
-function showCards(projects, cards) {
-  for (let item of projects) {
-    let card = document.createElement("div");
-    card.classList.add("content");
-    card.innerHTML = `<h2>${item.title}</h2>
-    <img src=${item.image}>
-    <p>${item.description}</p>
-    <a href="${item.link}">Click Here</a>`;
-    cards.appendChild(card);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cardsWrapper = document.getElementById('cards-wrapper');
+
+
+  function showCards(projects, cardsContainer) {
+    projects.forEach(project => {
+      const card = document.createElement('div');
+      card.classList.add('content');
+      card.innerHTML = `
+              <h2>${project.title}</h2>
+              <img src="${project.image}" alt="${project.title}">
+              <p>${project.description}</p>
+              <a href="${project.link}">Click Here</a>
+          `;
+      cardsContainer.appendChild(card);
+    });
   }
-}
 
-if (cards != null) {
-  let projects = projectData;
-  showCards(projects, cards);
-}
+  if (cardsWrapper) {
+    showCards(projectData, cardsWrapper);
+  }
+});
 
 // Toggle Visibility of hiddenDiv
 const hidden = document.getElementById("hiddenDiv");
@@ -37,9 +43,9 @@ toggleButton.addEventListener('click', toggleDiv);
 
 function toggleDiv() {
   hideShow.classList.toggle('display-none');
-}
+};
 
-// Color Picker Logic
+// Color Picker 
 let color = "#000000";
 const form = document.getElementById("form");
 form.addEventListener("submit", submitFunction);
@@ -55,11 +61,11 @@ function submitFunction(event) {
   } else if (changeOption === "text") {
     hidden.style.color = selectedColor;
   }
-  
-  form.reset(); // Reset form after submission
-}
 
-// Dropdown change listener
+  form.reset(); // Reset form after submission
+};
+
+// Dropdown change 
 let select = document.querySelector("select");
 select.addEventListener("change", (event) => {
   color = event.target.value;
