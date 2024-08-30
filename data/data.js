@@ -18,6 +18,7 @@ const projectData = [
         link: "https://arcieex.github.io/Ice-Cream-Form/",
     }
 ];
+
 export default projectData;
 
 
