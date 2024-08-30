@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 :root {
     --mainfont: ;
     --chocolate: #784935;
@@ -11,22 +13,26 @@
     --black: #000;
 
 }
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
 html {
     margin: 0;
     border: 0;
     padding: 0;
 }
+
 body {
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
     background-color: #000;
 }
+
 /* Wrap entire page except header and footer in a div and give that display: grid */
 header {
 
@@ -44,49 +50,24 @@ header {
     white-space: nowrap;
     justify-content: space-between;
 }
+
 h1 {
     color: var(--white)
 }
+
 .title {
     display: flex;
     align-items: center;
 }
+
 .logo {
     width: 2rem;
     height: 2rem;
     max-width: 100%;
 }
-.pink-menu {
-    display: none;
-    cursor: pointer;
-}
-.pink menu i {
-    display: none;
-    color: var(--pink);
-}
-.sidebar {
-    display: none;
-    /* flex-direction: column;
-    justify-content: space-around; */
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-    word-spacing: 3px;   
-}
 .sidebar a {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
     text-decoration: none;
-    text-align: center;
-    word-spacing: 3px;
-}
-.sidebar a:hover {
-    color: white;
-} 
-.change {
-    display: none;
+    list-style: none;
 }
 .hero {
     display: block;
@@ -99,6 +80,7 @@ h1 {
     Width: 100%;
     height: 20rem;
 }
+
 .hero-text {
     background-color: rgb(0, 0, 0);
     /* Fallback color */
@@ -119,6 +101,7 @@ h1 {
     display: block;
     position: relative;
 }
+
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -131,6 +114,7 @@ h1 {
     margin-bottom: 3rem;
     align-self: center;
 }
+
 .cards-wrapper {
     display: flex;
     flex-direction: column;
@@ -142,6 +126,7 @@ h1 {
     margin-bottom: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 img {
     max-width: 100%;
     align-self: center;
@@ -149,6 +134,7 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 3s;
 }
+
 .content {
     text-align: center;
     background-color: pink;
@@ -158,6 +144,7 @@ img {
     border-radius: 10%;
     justify-content: center;
 }
+
 .content a {
     text-decoration: none;
     background-color: var(--black);
@@ -167,12 +154,14 @@ img {
     border: 0.2rem solid var(--nude);
     cursor: pointer;
 }
+
 .content a:hover {
     background-color: var(--white);
     color: var(--pink);
 
 }
-.about{
+
+.about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,11 +170,11 @@ img {
     width: 100%;
     right: 0;
     left: 0;
-    
+
 }
+
 .column {
-    grid-column: 1/2;
-    grid-row: 2/3;
+   
     float: left;
     max-width: 100%;
     margin-bottom: 1rem;
@@ -197,11 +186,12 @@ img {
 
 .card {
     box-shadow: 0 8px 8px 0;
+    padding: 3rem;
 }
 
 .container {
     padding: 0 16px;
-    background-color: white;   
+    background-color: white;
 }
 
 .scroll i {
@@ -231,11 +221,14 @@ footer {
 .footer-icons-wrapper {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 3rem;
 }
+
 /* ABOUT PAGE SECTION */
 .about-main-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
     background-color: #fff;
     color: var(--redwood);
@@ -243,6 +236,12 @@ footer {
 
 .about {
     grid-column: 2/3;
+}
+.about img {
+    max-width: 100%;
+}
+.about-container{
+    text-align: center;
 }
 
 /* JAVASCRIPT  PAGE SECTION */
@@ -256,7 +255,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-   padding-bottom: 4rem;
+    padding-bottom: 4rem;
 
 }
 
@@ -270,14 +269,15 @@ footer {
     color: black;
 }
 
-/* .display-none {
+/* .js-none {
     display: none;
-    height: 200px;
-	width: 200px;
-	margin: 2rem auto;
-	background-color: lightblue;
+    
 } */
+.display-none {
+    display: none;
+}
 .show-div {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,9 +288,11 @@ footer {
     padding: 2rem;
     margin: 4rem;
     border-radius: 3%;
+    
 }
+
 select#selectColor {
-   
+
     background: rgba(255, 255, 255, 0.1);
     border: none;
     font-size: 16px;
@@ -304,7 +306,8 @@ select#selectColor {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
 }
-select#selectType {
+
+select#changeOption {
     background: rgba(255, 255, 255, 0.1);
     border: none;
     font-size: 16px;
@@ -341,10 +344,19 @@ select#selectType {
     max-width: 100%;
     border-radius: 3%;
 }
-.js-card:hover{
+
+.js-card:hover {
     color: white;
     cursor: pointer;
 }
+
+.js-text {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
 
 /* CONTACT PAGE SECTION*/
 .main-contact {
@@ -375,7 +387,7 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="number"],
+input[type="tel"],
 textarea {
     background: rgba(255, 255, 255, 0.1);
     border: none;
@@ -418,57 +430,94 @@ fieldset {
     .pink-menu {
         display: block;
         cursor: pointer;
-        right: 0;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
-
-    
 
     .pink-menu i {
         display: block;
     }
 
+    /* Sidebar hidden by default on small screens */
     .sidebar {
-        display: flex;
+        display: none; /* Only visible when .change is added */
+        flex-direction: column;
+        justify-content: space-around;
         font-size: 2rem;
-        display: none ;
+        position: absolute;
+        top: 7.5rem; /* Adjust as needed */
         left: 0;
         right: 0;
-        position: absolute;
+        background-color: black;
+        height: 100vh;
+        transition: left 0.3s ease;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .sidebar a {
+        color: pink;
+    }
+    .sidebar a:hover {
+        color: white;
     }
 
-    .change{
-        display: block;
-        left: 0;
-        right: 0;
-        top: 7.5rem;
-        background-color: #DBA493;
-        height: 100vh;
-        font-stretch: ultra-expanded;
-        transition: 2s;
-        padding: 0;
-        align-content: center;
-        text-align: center;
-        margin: 1rem 0rem 1rem 0;
+    /* Sidebar visible when .change class is applied */
+    .sidebar.change {
+        display: flex;
     }
 }
 
 @media (min-width: 701px) {
-    .change {
-        display: none;
-    }
-
-    .sidebar {
-        flex-direction: row;
-        display: flex;
-        flex-direction: row;
-        box-sizing: content-box;
-    }
-    .js-cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
+    header {
+        align-items: center;
+        justify-content: center;
     }
     
+    .sidebar {
+        display: block; /* Visible on larger screens */
+        position: relative;
+        background-color: transparent;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        padding-left: 1.5rem;
+    }
+    .sidebar a {
+        color: var(--pink);
+        text-align: center;
+    }
+    .sidebar a:hover {
+        color: white;
+    }
 
+    .pink-menu {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .pink-menu i {
+        display: none;
+    }
+    .js-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    
 }
-
+@media (min-width: 1200px) {
+    header {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-left: 1rem;
+    }
+    
+}

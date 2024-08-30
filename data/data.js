@@ -17,7 +17,7 @@ const projectData = [
         description: "This form was created 6/15/2023 on Visual Studios. Structured with HTML5, CSS flexbox& Grid And JavaScipt.  ",
         link: "https://arcieex.github.io/Ice-Cream-Form/",
     },
-]
+];
 export default projectData;
 
 

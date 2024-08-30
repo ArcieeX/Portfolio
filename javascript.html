@@ -16,6 +16,8 @@
         <button class="pink-menu">
             <i class="fa fa-bars" style="color: #d69999;"></i>
         </button>
+
+        <!-- Sidebar navigation -->
         <div class="sidebar">
             <a href="index.html">Home</a>
             <a href="about.html" target="_blank">About</a>
@@ -34,13 +36,10 @@
                 <i class="fa fa-file fa-beat-fade" style="color:#e5aeae">Resume</i>
             </a>
         </div>
-
     </header>
-
 
     <div class="js-hero">
         <h2 class="js-h2">Javascript</h2>
-
         <div class="js-cards">
             <button class="js-card">
                 Madlib
@@ -53,36 +52,33 @@
             </button>
         </div>
         <div id="hiddenDiv" class="display-none show-div">
-            <form action="#" id="form">
-                <!-- form will have an ID of form. save that into a JS variable. then add an event listenter like this: form.addEventListener("submit", sumbitFunction). Get the boilerplate code from other forms and then you will have the data from the user in an object and you van use those the values -->
-            <label id="textColor" for="selectColor">
-                Choose a color:
-            </label>
-            <select id="selectColor" name="selectColor">
-                
-                <option value="crimson">Red</option>
-                <option value="green">Green</option>
-                <option value="#0984e3">Blue</option>
-                <option value="cyan">Cyan</option>
-                <option value="#00b894">Mint Leaf</option>
-                <option value="#e84393">Pink</option>
-            </select>
-            <label id="colorText" for="selectColor">
-                Choose a text Color:
-            </label>
-            <select id="selectColor">
-                <option value="crimson">Red</option>
-                <option value="green">Green</option>
-                <option value="#0984e3">Blue</option>
-                <option value="#e84393">Pink</option>
-            </select>
-            <input type="submit">
-        </form>
-        </div>
-       
+            <form id="form">
+                <!-- Form elements -->
+                <label for="selectColor">Choose a color:</label>
+                <select id="selectColor" name="selectColor">
+                    <option value="crimson">Red</option>
+                    <option value="green">Green</option>
+                    <option value="#0984e3">Blue</option>
+                    <option value="cyan">Cyan</option>
+                    <option value="#00b894">Mint Leaf</option>
+                    <option value="#e84393">Pink</option>
+                </select>
 
-        
+                <label for="changeOption">Choose what to change:</label>
+                <select name="changeOption" id="changeOption">
+                    <option value="background">Background Color</option>
+                    <option value="text">Text Color</option>
+                </select>
+
+                <input type="submit" id="submitColorButton" value="Apply Color">
+            </form>
+
+            <div class="js-text">
+                <p id="colorText">You Are Beautiful!</p>
+            </div>
+        </div>
     </div>
+
 
     <footer>
         <div class="footer-icons-wrapper">
@@ -98,8 +94,6 @@
         </div>
         <p>&COPY; All rights reserved.</p>
     </footer>
-
-    <script src="data/data.js"></script>
     <script type="module" src="js/custom.js"></script>
 </body>
 

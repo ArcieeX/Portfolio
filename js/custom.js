@@ -1,91 +1,70 @@
-import projectData from "/data/data.js";
-console.log(projectData)
+import projectData from "/data/data.js"; // Ensure this path is correct
+console.log(projectData);
 
 const nav = document.querySelector(".sidebar");
-const icon = document.querySelector(".pink-menu i");
+const menuIcon = document.querySelector(".pink-menu i");
 
-icon.addEventListener("click", showNav);
-function showNav() {
-  icon.classList.toggle("fa-times")
-  nav.classList.toggle("change");
-  // nav.classList.toggle("display-none")
-  // nav.classList.add("change")
-};
-// showNav()
-
-//NavBar starts hidden (displau: none)
-//When the user clicks the button, the nav shows
+menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("change"); // Toggle the sidebar visibility
+    menuIcon.classList.toggle("fa-times"); // Change icon to 'X' when open
+});
 
 
+// Cards logic
 let cards = document.getElementById('cards-wrapper');
-
 function showCards(projects, cards) {
-
   for (let item of projects) {
-    let card = document.createElement("div")
-    card.classList.add("content")
+    let card = document.createElement("div");
+    card.classList.add("content");
     card.innerHTML = `<h2>${item.title}</h2>
     <img src=${item.image}>
     <p>${item.description}</p>
-    <a href="${item.link}">Click Here</a>`
-    cards.appendChild(card)
+    <a href="${item.link}">Click Here</a>`;
+    cards.appendChild(card);
   }
 }
 
 if (cards != null) {
   let projects = projectData;
   showCards(projects, cards);
-};
+}
 
-
-
+// Toggle Visibility of hiddenDiv
+const hidden = document.getElementById("hiddenDiv");
 let hideShow = document.querySelector('.show-div');
-
 const toggleButton = document.getElementById('toggleBtn');
 toggleButton.addEventListener('click', toggleDiv);
 
 function toggleDiv() {
-  hideShow.classList.toggle('display-none')
-};
-let color = "#E99394";
-let textColor = "#b36a5eff";
-
-let userArray = [];
-const form = document.getElementById("form");
-form.addEventListener("submit", onFormSubmit);
-
-function onFormSubmit(event) {
-	event.preventDefault();
-	const data = new FormData(event.target);
-	const dataObject = Object.fromEntries(data.entries());
-	//above is boiler plate code
-	userArray.push(dataObject);
-  changeColor(color);
-  changeTextColor(textColor);
-	form.reset();
-};
-
-
-let select = document.querySelector("select");
-  select.addEventListener("change", (event) => {
-    color = event.target.value;
-   
-    
-  });
-let coloredText = document.querySelector("label");
-  coloredText.addEventListener("change", (event) => {
-    color = event.target.value;
-   
-    
-  });
-
-
-function changeColor(value) {
-  console.log(value)
-  hideShow.style.backgroundColor = value;
-};
-function changeTextColor(value){
-  coloredText.style.color = value;
+  hideShow.classList.toggle('display-none');
 }
+
+// Color Picker Logic
+let color = "#000000";
+const form = document.getElementById("form");
+form.addEventListener("submit", submitFunction);
+
+function submitFunction(event) {
+  event.preventDefault();
+
+  const changeOption = document.getElementById("changeOption").value;
+  const selectedColor = document.getElementById("selectColor").value;
+
+  if (changeOption === "background") {
+    hidden.style.backgroundColor = selectedColor;
+  } else if (changeOption === "text") {
+    hidden.style.color = selectedColor;
+  }
+  
+  form.reset(); // Reset form after submission
+}
+
+// Dropdown change listener
+let select = document.querySelector("select");
+select.addEventListener("change", (event) => {
+  color = event.target.value;
+});
+
+
 
 
